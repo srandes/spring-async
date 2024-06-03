@@ -1,0 +1,18 @@
+
+spring:
+  main.lazy-initialization: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/async?useTimezone=true&serverTimezone=UTC
+    username: root
+    password: 1983randY
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    properties:
+      hibernate:
+        jdbc:
+        '[format_sql]': true
+        '[enable_lazy_load_no_trans]': true
+    show_sql: true
+    open-in-view: false
+    hibernate:
+      ddl-auto: update
